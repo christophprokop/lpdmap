@@ -30,6 +30,9 @@ with open ("umap.lpd.csv", "w") as csvfile:
 
 with open ("umap.lpd.csv", "a") as csvfile:
     for i in cityurl: 
+        # FIXME
+        # these two broke the parser
+        # will fix when map is fine for use...
         if not i[0] == "Voralpen / Weis" or i[0] == "Hanau" or i[0].strip == "":
             try:
                 csvfile.write(i[0] + "; ")
